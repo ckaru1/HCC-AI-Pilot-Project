@@ -1,32 +1,25 @@
 package Final_Project;
-
 public class LinearRegressionModel {
-
     private double[] x;
     private double[] y;
     public static int count;
-
     public LinearRegressionModel() {
         count = 0;
         int size = 100;
         x = new double[size];
         y = new double[size];
     }
-
     public LinearRegressionModel(double[] xVals, double[] yVals, int setCount) {
         x = xVals;
         y = yVals;
         count = setCount;
     }
-
     public double[] getX() {
         return x;
     }
-
     public double[] getY() {
         return y;
     }
-
     public void addDataPair(double xVal, double yVal) {
         if (count < x.length) {
             x[count] = xVal;
@@ -34,10 +27,8 @@ public class LinearRegressionModel {
             count++;
         } else {
             System.out.println("The Array is full");
-
         }
     }
-
     private double sumSingleValues(char val) {
         double sum = 0;
         if (val == 'x') {
@@ -53,7 +44,6 @@ public class LinearRegressionModel {
         }
         return sum;
     }
-
     private double sumDualValues(String val) {
         double sum = 0;
         if (val.equals("x * x")) {
@@ -69,32 +59,44 @@ public class LinearRegressionModel {
         }
         return sum;
     }
-
     private double calculateAverageValue(char val) {
         return (sumSingleValues(val) / count);
     }
-
     public double calculateSlope() {
+        boolean allSame = true;
+        for (int i = 1; i < count; i++) {
+            if (x[i] != x[0]) {
+                allSame = false;
+            }
+        }
+        if (count < 2 || allSame) {
+            throw new IllegalStateException("Need at least 2 points with different x-values to fit a line");
+        }
         double xSum = sumSingleValues('x');
         double ySum = sumSingleValues('y');
         double xySum = sumDualValues("x * y");
         double xxSum = sumDualValues("x * x");
         return (((count * xySum) - (xSum * ySum)) / (count * xxSum - (Math.pow(xSum, 2))));
     }
-
     public double calculateIntercept() {
         return (calculateAverageValue('y') - (calculateAverageValue('x') * calculateSlope()));
     }
-
     public double findXgivenY(double y) {
         return ((y - calculateIntercept()) / calculateSlope());
     }
-
     public double findYgivenX(double x) {
         return (calculateSlope() * x + calculateIntercept());
     }
-
+    @Override
     public String toString() {
-        return ("y = " + calculateSlope() + "x +" + calculateIntercept());
+        double m = calculateSlope();
+        double b = calculateIntercept();
+        String sign = "";
+        if (b < 0) {
+            sign = "-";
+        } else {
+            sign = "+";
+        }
+        return String.format("y = %.4fx %s %.4f", m, sign, Math.abs(b));
     }
 }
