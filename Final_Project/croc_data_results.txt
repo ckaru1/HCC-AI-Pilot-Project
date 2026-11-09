@@ -1,0 +1,52 @@
+==========================================================================================
+Crocodilian Data Results
+Records analyzed: 160
+==========================================================================================
+
+1. Mean weight and length - entire data set
+------------------------------------------------------------------------------------------
+All crocodilians                   n = 160   mean weight =   212.51 kg   mean length =  2.584 m
+
+2. Mean weight and length - by common name
+------------------------------------------------------------------------------------------
+American alligator                 n =  40   mean weight =   262.45 kg   mean length =  2.862 m
+Chinese alligator                  n =  40   mean weight =    27.78 kg   mean length =  1.536 m
+Nile crocodile                     n =  40   mean weight =   273.63 kg   mean length =  2.993 m
+Saltwater crocodile                n =  40   mean weight =   286.20 kg   mean length =  2.946 m
+
+3. Mean weight and length - by common name and gender
+------------------------------------------------------------------------------------------
+American alligator (Female)        n =  20   mean weight =   201.40 kg   mean length =  2.256 m
+American alligator (Male)          n =  20   mean weight =   323.50 kg   mean length =  3.468 m
+Chinese alligator (Female)         n =  20   mean weight =    25.00 kg   mean length =  1.308 m
+Chinese alligator (Male)           n =  20   mean weight =    30.55 kg   mean length =  1.764 m
+Nile crocodile (Female)            n =  20   mean weight =   215.50 kg   mean length =  2.611 m
+Nile crocodile (Male)              n =  20   mean weight =   331.75 kg   mean length =  3.374 m
+Saltwater crocodile (Female)       n =  20   mean weight =   218.25 kg   mean length =  2.746 m
+Saltwater crocodile (Male)         n =  20   mean weight =   354.15 kg   mean length =  3.145 m
+
+Regression lines: x = weight (kg), y = length (m)
+
+4. Regression line - entire data set
+------------------------------------------------------------------------------------------
+All crocodilians                   n = 160   y = 0.0053x + 1.4644
+
+5. Regression line - by common name
+------------------------------------------------------------------------------------------
+American alligator                 n =  40   y = 0.0076x + 0.8775
+Chinese alligator                  n =  40   y = 0.0167x + 1.0724
+Nile crocodile                     n =  40   y = 0.0047x + 1.6954
+Saltwater crocodile                n =  40   y = 0.0014x + 2.5443
+
+6. Regression line - by common name and gender
+------------------------------------------------------------------------------------------
+American alligator (Female)        n =  20   y = -0.0003x + 2.3122
+American alligator (Male)          n =  20   y = -0.0014x + 3.9184
+Chinese alligator (Female)         n =  20   y = 0.0013x + 1.2761
+Chinese alligator (Male)           n =  20   y = 0.0073x + 1.5413
+Nile crocodile (Female)            n =  20   y = 0.0004x + 2.5239
+Nile crocodile (Male)              n =  20   y = 0.0013x + 2.9366
+Saltwater crocodile (Female)       n =  20   y = -0.0009x + 2.9362
+Saltwater crocodile (Male)         n =  20   y = -0.0019x + 3.8342
+
+==========================================================================================
